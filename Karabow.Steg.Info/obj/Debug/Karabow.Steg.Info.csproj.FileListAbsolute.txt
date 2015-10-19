@@ -1,0 +1,4 @@
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.Info\bin\Debug\Karabow.Steg.Info.dll
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.Info\bin\Debug\Karabow.Steg.Info.pdb
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.Info\obj\Debug\Karabow.Steg.Info.dll
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.Info\obj\Debug\Karabow.Steg.Info.pdb
