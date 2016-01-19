@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{750639EA-1F84-4CB4-AABC-E49465C79B5A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Karabow.Steg.GUI</RootNamespace>
+    <AssemblyName>Karabow.Steg.GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtendedTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExtendedTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HelpTopicsButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HintedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Navigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navigator.Designer.cs">
+      <DependentUpon>Navigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUpWindow.Designer.cs">
+      <DependentUpon>PopUpWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm.Designer.cs">
+      <DependentUpon>WinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplicationSettings.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeOrientation.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseAllDocuments.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseApplication.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseCurrentDocument.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CssFile.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoBack.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoForward.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoHome.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpTopics.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MarkUpSettings.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavigateTo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PictureFile.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RemoveAll.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectAll.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashScreen1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SwapDocs.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Karabow.Steg.Core\Karabow.Steg.Core.csproj">
+      <Project>{47c94f57-761f-4f57-805d-9c7d7630cff9}</Project>
+      <Name>Karabow.Steg.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Karabow.Steg.Info\Karabow.Steg.Info.csproj">
+      <Project>{183b2a28-7d25-4671-8b38-7c4bb4c8bbc5}</Project>
+      <Name>Karabow.Steg.Info</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErrorImage.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InfoImage.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuestionImage.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningImage.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileToImage.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImageToFile.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Steganography.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EncryptionStudio.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Company.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

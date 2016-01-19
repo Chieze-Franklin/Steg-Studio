@@ -1,0 +1,5 @@
+﻿Karabow.Steg.GUI.WinForm
+	replace icons
+	help contents
+
+Add multi-threading

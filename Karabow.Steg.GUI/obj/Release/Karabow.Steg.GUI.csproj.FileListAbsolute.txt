@@ -1,0 +1,12 @@
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\bin\Release\Karabow.Steg.GUI.exe.config
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\bin\Release\Karabow.Steg.GUI.exe
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\bin\Release\Karabow.Steg.GUI.pdb
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\bin\Release\Karabow.Steg.Core.dll
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\bin\Release\Karabow.Steg.Info.dll
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\bin\Release\Karabow.Steg.Core.pdb
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\bin\Release\Karabow.Steg.Info.pdb
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\obj\Release\Karabow.Steg.GUI.csprojResolveAssemblyReference.cache
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\obj\Release\Karabow.Steg.GUI.Properties.Resources.resources
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\obj\Release\Karabow.Steg.GUI.csproj.GenerateResource.Cache
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\obj\Release\Karabow.Steg.GUI.exe
+C:\Users\frank\Documents\Visual Studio 2013\Projects\Karabow.Steg.Core\Karabow.Steg.GUI\obj\Release\Karabow.Steg.GUI.pdb

@@ -1,0 +1,8 @@
+Steganography is the production and placing in computer files of secret messages detectable only by special software.<br /><br />
+
+Steg Studio stores specified files in image files.<br /><br />
+
+This means you can hide that confidential document inside the picture of yoru pet dog. To a casual observer, it's just a
+picture. But you know better :-).
+
+For a brief technical discussion, please visit the wiki of this repository.

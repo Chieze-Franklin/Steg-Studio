@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Steg Studio</title>
+	</head>
+	
+	<body>
+	
+		<pre>
+			Title:       Steg Studio
+			Author:      Franklin Chieze
+			Email:       chieze.franklin@gmail.com
+			Language:    C# 5.0
+			Platform:    Windows
+			Technology:  .NET Framework
+			Level:       Intermediate
+			Description: Steg Studio is a simple demonstration of image steganography: hiding files in images.
+			Section      Desktop Development
+			SubSection   General
+			License:     CPOL
+		</pre>
+		
+		<link type="text/css" rel="stylesheet" href="./Steg Studio_files/Main.min.css">
+		
+		<div class="page-background">
+			<div id="A" class="container-content-wrap fixed article">
+				<form>
+					<div class="header">
+					    <a name="_articleTop" id="_articleTop"></a>
+					    <div class="title">
+					        <h1 id="ctl00_ArticleTitle" itemprop="name">Steg Studio</h1> 
+					    </div>
+                    </div>
+
+					<div id="contentdiv" class="text" itemprop="articleBody">
+						<ul class="download">
+							<!--<li><a href="./steg_app_v1_0_binaries.zip">Download Steg Studio v1.0 Binaries - 273 KB</a></li>-->
+							<li><a href="./steg_app_v1_0_sources.zip">Download Steg Studio v1.0 Sources - 336 KB</a></li>
+							<li><a href="https://github.com/Chieze-Franklin/Steg-Studio">GitHub repo</a></li>
+						</ul>
+
+						<p>
+							<img width="600" height="320" src="./Steg Studio_files/home.png" />
+						</p>
+
+						<h2>Introduction</h2>
+						<p>
+							Steg Studio is an image steganography software: it hides information in image files. You can do this by altering the least 
+							significant bit of the pixel bytes in an image. This changes the image in a way that may not be (too) noticeable to the human eye.
+						</p>
+
+						<h2>Background</h2>
+						<p>
+							I did this projects some years back (2011) but my newly found love for open source has led me to release it.
+							I altered some statements dealing with license and copyright to make it more permissive but I didn't change much in the code
+							(except for adding support for password and putting classes in the Karabow.Steg.* namespaces), so the codes you will see are 
+							codes from many years back.
+						</p>
+						<p>
+							Also, I would like to acknowledge that I got the bulk of my steganography code from my classmate back in 2011. I am absolutely 
+							sure he got the source code from somewhere/someone else. I have since lost contact with this ex-mate of mine and, as a result, 
+							had no name to include in the acknowledgement that appears in the source code (Karabow.Steg.Core/Steganographer.cs).
+						</p>
+						<p>
+							This is not one of my most original works. I will be writing on more projects soon enough but for the time being you can check out 
+							my favourite project of the moment, <a href="https://github.com/Chieze-Franklin/Quic">Quic</a> web development framework. 
+							This post, however, helps me to "test the waters" as I'm about to dive deep into the world of open source development.
+						</p>
+						
+						<h2>A Brief on Steganography</h2>
+						<p>
+							To hide information in an image, you can do this by altering the least significant bit of the pixel 
+							bytes in an image. This changes the image in a way that may not be (too) noticeable to the human eye.
+						</p>
+						
+						<p>
+							An image consists of a pixels, and each pixel has 3 color components: R (red), G (green), B (blue). Each color component is 
+							of the bytes data-type, which means it consists of eight bits (binary digits). The least significant bit is the one to the right, 
+							and this is the bit we alter.
+						</p>
+						
+						<p>
+							So to hide a file in an image, we break that file into its constituent bits. That is, we get a representation of the file that 
+							consists of ones and zeros.<br />
+							Now, we go through the pixels of the "mask image", and store the bits of the file in the least significant bit of each color 
+							component of each pixel. Since a pixel has 3 color components, it means you can store 3 bits per pixels. So a file that is 
+							1000 bytes in length, which is 8000 bits, will require an image with at least (8000/3) pixels, approximately 2667 pixels. 
+							The pixels of a bitmap can be gotten by multiplying its width by its height. It should also be mentioned that a pixel has a 
+							fourth component, A (alpha), which represents its transparency/opacity. Including this component increases the amount
+							of bits the image can store, since it now stores 4 bits per pixel, as against 3 bits per pixel.
+						</p>
+						
+						<p>
+							For actual code you can check out <em>Karabow.Steg.Core/Steganographer.cs</em>. For more information you can always search online :).
+						</p>
+
+						<h2>How to use Steg Studio</h2>
+						<h3>System Requirements</h3>
+						<p>
+							<ul>
+								<li>The particular build was built on a Windows 8 machine, but should run with no modification on Windows 10, Windows 7.</li>
+								<li>The target framework is .NET Framework 4.5, but the source code can be built against .NET Framework 5.0 and many previous versions.</li>
+							</ul>
+						</p>
+						<h3>Using the App</h3>
+						<p>
+							I am assuming you have downloaded (and extracted files from) the relevant zip files.
+							<ul>
+								<li>
+									<br />
+									<img width="600" height="320" src="./Steg Studio_files/enc_pg_with_labels.png" /><br /><br />
+									
+									The "Encryption Page" is quite straightforward. You can select a file you want to hide, or a list of files using wild card 
+									characters (like *.txt), the image in which they will be hidden, and the password (without which the original files cannot be extracted
+									from the image).<br /><br />
+									
+									<img width="600" height="320" src="./Steg Studio_files/enc_pg_done.png" /><br /><br />
+								</li>
+								<li>
+									Below is the folder from which I selected the files to hide. Visible also is the mask image, <em>Mask.jpg</em>.<br /><br />
+									
+									<img width="600" height="320" src="./Steg Studio_files/original_files.png" /><br /><br />
+									
+									Below is the same folder after I have hidden all the <em>*.cs</em> files in the mask image, <em>Mask.jpg</em>. Steg Studio
+									saves the produced images with the same name as the original files, but with the same extension of the mask image.<br /><br />
+									
+									<img width="600" height="320" src="./Steg Studio_files/enc_files.png" /><br />
+									I changed <em>Mask.jpg</em> to <em>Mask.jpeg</em> so that during the reverse process (getting the original files from the images),
+									I can use the wild card <em>*.jpg</em> to get all appropriate images.<br /><br />
+								</li>
+								<li>
+									The "Decryption Page" is even simpler.<br /><br />
+									
+									<img width="600" height="320" src="./Steg Studio_files/dec_pg.png" /><br /><br />
+									
+									During "decryption", you have to supply a name with which the file extracted from the image will be stored.<br /><br />
+								</li>
+								<li>
+									Below is the folder after I have extracted all the hidden files from the appropriate images.<br /><br />
+									
+									<img width="600" height="320" src="./Steg Studio_files/dec_files.png" /><br />
+									I did not choose to delete the "carrier" images.<br /><br />
+								</li>
+								<li>
+									Comparing the files before and after the entire process, you see that the final files are exactly identical to the
+									original files.<br /><br />
+									
+									<img width="600" height="320" src="./Steg Studio_files/comparing file sizes.png" /><br />
+									Compare the file sizes.
+								</li>
+							</ul>
+						</p>
+						
+						<h2>Points of Interest</h2>
+						<p>
+							The actual steganography methods are found in the file <em>Karabow.Steg.Core/Steganographer.cs</em>.
+						</p>
+</div>
+
+<h2>License</h2>
+<div id="LicenseTerms">
+<p>This article, along with any associated source code and files, is licensed under <a href="http://www.codeproject.com/info/cpol10.aspx" rel="license">The Code Project Open License (CPOL)</a></p></div><br>
+						
+					<div style="padding-top:8px">
+						<a class="anchorLink" href="#_articleTop">Article Top</a>
+					</div>
+				</form>
+			</div>
+		</div> 
+	</body>
+</html>

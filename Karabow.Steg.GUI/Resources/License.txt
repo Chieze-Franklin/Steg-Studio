@@ -1,0 +1,1 @@
+This software uses the CPOL, from Code Project.
