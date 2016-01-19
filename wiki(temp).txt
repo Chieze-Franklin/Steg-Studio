@@ -1,0 +1,31 @@
+Welcome to the Steg-Studio wiki!
+
+## Introduction
+Steg Studio is an image steganography software: it hides information in image files. You can do this by altering the least significant bit of the pixel bytes in an image. This changes the image in a way that may not be (too) noticeable to the human eye.
+
+## Background
+I did this projects some years back (2011) but my newly found love for open source has led me to release it. I altered some statements dealing with license and copyright to make it more permissive but I didn't change much in the code (except for adding support for password and putting classes in the Karabow.Steg.* namespaces), so the codes you will see are codes from many years back.
+
+Also, I would like to acknowledge that I got the bulk of my steganography code from my classmate back in 2011. I am absolutely sure he got the source code from somewhere/someone else. I have since lost contact with this ex-mate of mine and, as a result, had no name to include in the acknowledgement that appears in the source code (Karabow.Steg.Core/Steganographer.cs).
+
+This is not one of my most original works. I will be writing on more projects soon enough but for the time being you can check out my favourite project of the moment, [Quic](https://github.com/Chieze-Franklin/Quic) web development framework. This post, however, helps me to "test the waters" as I'm about to dive deep into the world of open source development.
+
+## A Brief on Steganography
+To hide information in an image, you can do this by altering the least significant bit of the pixel bytes in an image. This changes the image in a way that may not be (too) noticeable to the human eye.
+
+An image consists of a pixels, and each pixel has 3 color components: R (red), G (green), B (blue). Each color component is of the bytes data-type, which means it consists of eight bits (binary digits). The least significant bit is the one to the right, and this is the bit we alter.
+
+So to hide a file in an image, we break that file into its constituent bits. That is, we get a representation of the file that consists of ones and zeros.  
+Now, we go through the pixels of the "mask image", and store the bits of the file in the least significant bit of each color component of each pixel. Since a pixel has 3 color components, it means you can store 3 bits per pixels. So a file that is 1000 bytes in length, which is 8000 bits, will require an image with at least (8000/3) pixels, approximately 2667 pixels. The pixels of a bitmap can be gotten by multiplying its width by its height. It should also be mentioned that a pixel has a fourth component, A (alpha), which represents its transparency/opacity. Including this component increases the amount of bits the image can store, since it now stores 4 bits per pixel, as against 3 bits per pixel.
+
+For actual code you can check out <em>Karabow.Steg.Core/Steganographer.cs</em>. For more information you can always search online :).
+
+## How to use Steg Studio
+### System Requirements
+* The particular build was built on a Windows 8 machine, but should run with no modification on Windows 10, Windows 7.
+* The target framework is .NET Framework 4.5, but the source code can be built against .NET Framework 5.0 and many previous versions.
+
+### Using the App
+The "Encryption Page" is quite straightforward. You can select a file you want to hide, or a list of files using wild card characters (like *.txt), the image in which they will be hidden (click the big box below the file name(s) text box), and the password (without which the original files cannot be extracted from the image).
+
+The "Decryption Page" is even simpler. Choose the "carrier" image, supply the password you used during the encryption process. Decrypt.
