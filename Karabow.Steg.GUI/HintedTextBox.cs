@@ -74,5 +74,18 @@ namespace Karabow.Steg.GUI
                     UseSystemPasswordChar = value;
             }
         }
+        public override string Text
+        {
+            get
+            {
+                if (waterMarkActive)
+                    return "";
+                return base.Text;
+            }
+            set
+            {
+                base.Text = value;
+            }
+        }
     }
 }
